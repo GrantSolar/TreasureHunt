@@ -47,7 +47,10 @@ $("td").click( function(){
     if($(this).attr('checked') != 'checked')
     {
         console.log('doing it');
-    	$(this).css('background-image','url(https://image.freepik.com/free-icon/square-sketch_318-75493.png)');
+		var randImgNo = Math.floor((Math.random()*3) + 1);
+		var randImg = "scribble-out"+randImgNo+".png";
+		console.log(randImg);
+    	$(this).css('background-image','url('+randImg+')');
         $(this).attr('checked', '1');
     	clicked++;
     }
