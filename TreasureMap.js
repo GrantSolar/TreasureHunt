@@ -2,7 +2,6 @@ var mapSize = 5;
 var tableSize = mapSize + 1;
 var clicked = 0;
 
-//$(document).ready( function(){
 console.log("ready");
 var grid = "";
 grid += "<tr><th></th>";
@@ -21,13 +20,16 @@ for(var i = 1; i<tableSize; i++)
     grid += "</tr>";
 }
 
-//function init()
-//{
-	$("#map").html(grid);
-//}
+$("#map").html(grid);
 
-//init();
-//});
+
+function restart()
+{
+	$("td").removeAttr('checked');
+	//this one seems dangerous
+	$("td").removeAttr('style');
+	clicked = 0;
+}
 
 $("td").click( function(){
     //win state: Make sure that most have been answered first
