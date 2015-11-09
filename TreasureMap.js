@@ -60,7 +60,7 @@ function startHandler(){
 		if($(this).attr('checked') != 'checked')
 		{
 			console.log('doing it');
-			var randImgNo = Math.floor((Math.random()*3) + 1);
+			var randImgNo = Math.floor((Math.random()*6) + 1);
 			var randImg = "scribble-out"+randImgNo+".png";
 			console.log(randImg);
 			$(this).css('background-image','url('+randImg+')');
