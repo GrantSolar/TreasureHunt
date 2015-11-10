@@ -37,7 +37,7 @@ function restart()
 
 function resize()
 {
-	var size = parseInt($("#sizeSelect").val());
+	size = parseInt($("#sizeSelect").val());
 	console.log(size);
 	restart();
 	$("#map").html("");
@@ -78,5 +78,5 @@ function startHandler(size){
 }
 console.log("loaded it all");
 
-generate(mapSize);
+generate(size);
 startHandler();
