@@ -1,4 +1,4 @@
-var mapSize = 5;
+var size = 5;
 var clicked = 0;
 
 function generate(size){
