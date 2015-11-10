@@ -78,5 +78,5 @@ function startHandler(size){
 }
 console.log("loaded it all");
 
-generate(size);
+resize();
 startHandler();
