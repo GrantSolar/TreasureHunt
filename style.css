@@ -1,10 +1,14 @@
+
+body
+{
+	font-family: 'Ubuntu', sans-serif;
+}
 table
 {
     border-collapse: collapse;
     background-image: url("http://npswim.webmanagementsystem.biz/wp-content/uploads/2013/05/Coventry-Map.png");
     background-position: top 66px left 66px;
     background-repeat: no-repeat;
-	font-family: 'Ubuntu', sans-serif;
 }
 th, td
 {
@@ -21,7 +25,6 @@ button {
   width: auto;
   height: auto;
   padding: 10px;
-  font-family: 'Ubuntu', sans-serif;
   font-size: 22px;
   color: white;
   text-align: center;
