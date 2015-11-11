@@ -5,6 +5,8 @@ emojione.imageType = 'svg';
 emojione.imagePathPNG = './emojione-master/assets/png/';
 emojione.imagePathSVG = './emojione-master/assets/svg/';
 
+var items = [":house:",":church:",":school:",":hospital:",":bank:",":hotel:",":office:",":classical_building:",":stadium:",":department_store:",":european_post_office:",":airplane:",":steam_locomotive:"];
+
 function generate(size){
 	console.log("ready");
 	var tableSize = size + 1;
@@ -22,7 +24,10 @@ function generate(size){
 		grid += "<tr><th>"+String.fromCharCode(i+64)+"</th>";
 		for(var j = 1; j<tableSize; j++)
 		{
-			grid += "<td>:house:</td>";
+			var landmark = "";
+			if(Math.random() <= 0.25)
+				landmark = items[Math.floor(Math.random()*items.length)];
+			grid += "<td>"+landmark+"</td>";
 		}
 		grid += "</tr>";
 	}
