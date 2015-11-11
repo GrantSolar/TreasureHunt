@@ -2,8 +2,8 @@ var size = 5;
 var clicked = 0;
 
 emojione.imageType = 'svg';
-    emojione.imagePathPNG = './emoji-master/assets/png/';
-    emojione.imagePathSVG = './emojione-master/assets/svg/';
+emojione.imagePathPNG = './emojione-master/assets/png/';
+emojione.imagePathSVG = './emojione-master/assets/svg/';
 
 function generate(size){
 	console.log("ready");
