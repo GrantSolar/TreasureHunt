@@ -1,6 +1,10 @@
 var size = 5;
 var clicked = 0;
 
+emojione.imageType = 'svg';
+    emojione.imagePathPNG = './emoji-master/assets/png/';
+    emojione.imagePathSVG = './emojione-master/assets/svg/';
+
 function generate(size){
 	console.log("ready");
 	var tableSize = size + 1;
@@ -18,11 +22,11 @@ function generate(size){
 		grid += "<tr><th>"+String.fromCharCode(i+64)+"</th>";
 		for(var j = 1; j<tableSize; j++)
 		{
-			grid += "<td></td>";
+			grid += "<td>:house:</td>";
 		}
 		grid += "</tr>";
 	}
-	$("#map").html(grid);
+	$("#map").html(emojione.shortnameToImage(grid));
 	
 }
 
