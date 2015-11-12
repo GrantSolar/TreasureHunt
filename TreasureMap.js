@@ -26,8 +26,18 @@ function generate(size){
 		{
 			var landmark = "";
 			if(Math.random() <= 0.25)
+			{
 				landmark = items[Math.floor(Math.random()*items.length)];
-			grid += "<td>"+landmark+"</td>";
+				var landmarkImg = emojione.emojioneList[landmark];
+				if(landmarkImg.length > 1)
+					landmarkImg = landmarkImg[landmarkImg.length - 1];
+				console.log("Using emoji "+landmark+" - "+landmarkImg);
+				console.log(landmarkImg.toString().toUpperCase());
+				landmarkImg = landmarkImg.toString().toUpperCase();
+				grid += "<td style=\"background-image: url("+emojione.imagePathPNG+landmarkImg+".png)\"></td>";
+			}
+			else
+				grid += "<td></td>";
 		}
 		grid += "</tr>";
 	}
@@ -77,7 +87,8 @@ function startHandler(size){
 			var randImgNo = Math.floor((Math.random()*6) + 1);
 			var randImg = "scribble-out"+randImgNo+".png";
 			console.log(randImg);
-			$(this).css('background-image','url('+randImg+')');
+			//$(this).css('background-image','url('+randImg+')');
+			$(this).html("<img src=\""+randImg+"\"></img>");
 			$(this).attr('checked', '1');
 			clicked++;
 		}

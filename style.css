@@ -13,11 +13,18 @@ table
 th, td
 {
     border: 1px solid black;
+	padding: 0px;
     width: 64px;
-    height: 64px;
+    height: 65px;
 	font-size: 30pt;
     background-size: 64px;
     background-repeat: no-repeat;
+}
+
+img
+{
+	height: 100%;
+	width: 100%;
 }
 
 .emojione {
