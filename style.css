@@ -6,7 +6,7 @@ body
 table
 {
     border-collapse: collapse;
-    background-image: url("http://npswim.webmanagementsystem.biz/wp-content/uploads/2013/05/Coventry-Map.png");
+    background-image: url("./background.png");
     background-position: top 63px left 66px;
     background-repeat: no-repeat;
 }
