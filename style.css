@@ -19,10 +19,22 @@ th, td
     background-size: 64px;
     background-repeat: no-repeat;
 }
-.emojione
-{
-	margin: 0px;
+
+.emojione {
+    display: inline-block;
+    font-size: inherit;
+    height: 3ex;
+    line-height: normal;
+    margin: 0px;
+    min-height: 20px;
+    min-width: 20px;
+    vertical-align: middle;
+    width: 3.1ex;
 }
+img.emojione {
+    width: auto;
+}
+
 button {
   position: relative;
   vertical-align: top;
