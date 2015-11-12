@@ -28,7 +28,7 @@ function generate(size){
 			var landmark = "";
 			var rand = 0;
 			var index = 0;
-			if(Math.random() <= 0.25)
+			if(Math.random() <= 0.25 && items.length >= 1)
 			{
 				rand = Math.floor(Math.random()*items.length);
 				console.log(rand);
