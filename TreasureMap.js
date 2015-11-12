@@ -34,7 +34,7 @@ function generate(size){
 				console.log("Using emoji "+landmark+" - "+landmarkImg);
 				console.log(landmarkImg.toString().toUpperCase());
 				landmarkImg = landmarkImg.toString().toUpperCase();
-				grid += "<td style=\"background-image: url("+emojione.imagePathPNG+landmarkImg+".png)\"></td>";
+				grid += "<td style=\"background-image: url("+emojione.imagePathSVG+landmarkImg+".svg)\"></td>";
 			}
 			else
 				grid += "<td></td>";
@@ -50,7 +50,7 @@ function restart()
 {
 	$("td").removeAttr('checked');
 	//this one seems dangerous
-	$("td").removeAttr('style');
+	$("td").html("");//removeAttr('style');
 	clicked = 0;
 }
 
