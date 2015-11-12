@@ -19,6 +19,10 @@ th, td
     background-size: 64px;
     background-repeat: no-repeat;
 }
+.emojione
+{
+	margin: 0px;
+}
 button {
   position: relative;
   vertical-align: top;
