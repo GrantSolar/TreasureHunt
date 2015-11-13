@@ -30,7 +30,7 @@ img
 .container
 {
 	display: table;
-	margin: 0px auto;
+	margin: 0 auto;
 }
 
 .emojione {
