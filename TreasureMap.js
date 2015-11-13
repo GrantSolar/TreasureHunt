@@ -65,7 +65,7 @@ function restart()
 
 function resize()
 {
-	size = parseInt($("#sizeSelect").val());
+	//size = parseInt($("#sizeSelect").val());
 	console.log(size);
 	restart();
 	$("#map").html("");
@@ -73,6 +73,17 @@ function resize()
 	startHandler(size);
 }
 
+function sizeUp()
+{
+	size++;
+	resize();
+}
+
+function sizeDown()
+{
+	size--;
+	resize();
+}
 function startHandler(size){
 	$("td").click( function(){
 		//win state: Make sure that most have been answered first
