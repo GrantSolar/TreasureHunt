@@ -27,6 +27,12 @@ img
 	width: 63px;
 }
 
+.container
+{
+	display: table;
+	margin: 0px auto;
+}
+
 .emojione {
     display: inline-block;
     font-size: inherit;
