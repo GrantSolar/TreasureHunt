@@ -35,6 +35,7 @@ function generate(size){
 				console.log(rand);
 				landmark = items[rand];
 				landmarkName = landmark.replace(/:/g, "");
+				landmarkName = landmarkName.replace(/_/g, " ");
 				console.log(items[rand]);
 				index = items.indexOf(landmark);
 				items.splice(index,1);
