@@ -26,6 +26,7 @@ function generate(size){
 		for(var j = 1; j<tableSize; j++)
 		{
 			var landmark = "";
+			var landmarkName = "";
 			var rand = 0;
 			var index = 0;
 			if(Math.random() <= 0.25 && items.length >= 1)
@@ -33,6 +34,7 @@ function generate(size){
 				rand = Math.floor(Math.random()*items.length);
 				console.log(rand);
 				landmark = items[rand];
+				landmarkName = landmark.replace(/:/g, "");
 				console.log(items[rand]);
 				index = items.indexOf(landmark);
 				items.splice(index,1);
@@ -43,7 +45,7 @@ function generate(size){
 				//console.log("Using emoji "+landmark+" - "+landmarkImg);
 				//console.log(landmarkImg.toString().toUpperCase());
 				landmarkImg = landmarkImg.toString().toUpperCase();
-				grid += "<td style=\"background-image: url("+emojione.imagePathSVG+landmarkImg+".svg)\"></td>";
+				grid += "<td title=\""+landmarkName+"\" style=\"background-image: url("+emojione.imagePathSVG+landmarkImg+".svg)\"></td>";
 			}
 			else
 				grid += "<td></td>";
@@ -75,12 +77,16 @@ function resize()
 
 function sizeUp()
 {
+	if(size >= 8)
+		return;
 	size++;
 	resize();
 }
 
 function sizeDown()
 {
+	if(size <= 2)
+		return;
 	size--;
 	resize();
 }
