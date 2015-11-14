@@ -12,6 +12,7 @@ function generate(size){
 	console.log("Size: "+size);
 	console.log("Table size: "+tableSize);
 	var items = [":house:",":church:",":school:",":hospital:",":bank:",":hotel:",":office:",":classical_building:",":stadium:",":department_store:",":european_post_office:",":airplane:",":steam_locomotive:"];
+	var names = ["House", "Church", "School", "Hospital", "Bank", "Hotel", "Office", "Museum", "Stadium", "Department Store", "Post Office", "Airport", "Train Station"];
 	console.log(items);
 	var grid = "";
 	grid += "<tr><th></th>";
@@ -34,11 +35,13 @@ function generate(size){
 				rand = Math.floor(Math.random()*items.length);
 				console.log(rand);
 				landmark = items[rand];
-				landmarkName = landmark.replace(/:/g, "");
-				landmarkName = landmarkName.replace(/_/g, " ");
+				//landmarkName = landmark.replace(/:/g, "");
+				//landmarkName = landmarkName.replace(/_/g, " ");
+				landmarkName = names[rand];
 				console.log(items[rand]);
 				index = items.indexOf(landmark);
 				items.splice(index,1);
+				names.splice(index,1);
 				console.log(items);
 				var landmarkImg = emojione.emojioneList[landmark];
 				if(landmarkImg.length > 1)
