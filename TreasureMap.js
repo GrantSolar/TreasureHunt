@@ -35,8 +35,6 @@ function generate(size){
 				rand = Math.floor(Math.random()*items.length);
 				console.log(rand);
 				landmark = items[rand];
-				//landmarkName = landmark.replace(/:/g, "");
-				//landmarkName = landmarkName.replace(/_/g, " ");
 				landmarkName = names[rand];
 				console.log(items[rand]);
 				index = items.indexOf(landmark);
@@ -46,8 +44,6 @@ function generate(size){
 				var landmarkImg = emojione.emojioneList[landmark];
 				if(landmarkImg.length > 1)
 					landmarkImg = landmarkImg[landmarkImg.length - 1];
-				//console.log("Using emoji "+landmark+" - "+landmarkImg);
-				//console.log(landmarkImg.toString().toUpperCase());
 				landmarkImg = landmarkImg.toString().toUpperCase();
 				grid += "<td title=\""+landmarkName+"\" style=\"background-image: url("+emojione.imagePathSVG+landmarkImg+".svg)\"></td>";
 			}
@@ -65,13 +61,12 @@ function restart()
 {
 	$("td").removeAttr('checked');
 	//this one seems dangerous
-	$("td").html("");//removeAttr('style');
+	$("td").html("");
 	clicked = 0;
 }
 
 function resize()
 {
-	//size = parseInt($("#sizeSelect").val());
 	console.log(size);
 	restart();
 	$("#map").html("");
@@ -110,7 +105,6 @@ function startHandler(size){
 			if(Math.random() > 0.7 || clicked == (size*size)-1)
 			{
 				//do something to win
-				//$(this).css('background-image', 'url(http://img3.wikia.nocookie.net/__cb20130119235936/cityville/images/9/94/Viral_doublerainbow_pot_of_gold_64x64.png)');
 				$(this).html("<img src=\""+emojione.imagePathSVG+winImg+".svg\"></img>");
 				alert('nice one');
 				//this is a hack to get around things
@@ -119,11 +113,9 @@ function startHandler(size){
 		}
 		if($(this).attr('checked') != 'checked')
 		{
-			console.log('doing it');
 			var randImgNo = Math.floor((Math.random()*6) + 1);
 			var randImg = "scribble-out"+randImgNo+".png";
 			console.log(randImg);
-			//$(this).css('background-image','url('+randImg+')');
 			$(this).html("<img src=\""+randImg+"\"></img>");
 			$(this).attr('checked', '1');
 			clicked++;
