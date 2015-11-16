@@ -106,7 +106,7 @@ function startHandler(size){
 			{
 				//do something to win
 				$(this).html("<img src=\""+emojione.imagePathSVG+winImg+".svg\"></img>");
-				alert('nice one');
+				//alert('nice one');
 				//this is a hack to get around things
 				$(this).attr('checked','1');
 			}
