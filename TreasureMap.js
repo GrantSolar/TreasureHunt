@@ -62,6 +62,8 @@ function restart()
 	$("td").removeAttr('checked');
 	//this one seems dangerous
 	$("td").html("");
+	$("button.green").addClass("blue");
+	$("button.green").removeClass("green");
 	clicked = 0;
 }
 
@@ -70,6 +72,8 @@ function resize()
 	console.log(size);
 	restart();
 	$("#map").html("");
+	$("button.green").addClass("blue");
+	$("button.green").removeClass("green");
 	generate(size);
 	startHandler(size);
 }
@@ -79,6 +83,8 @@ function sizeUp()
 	if(size >= 8)
 		return;
 	size++;
+	$("button.green").addClass("blue");
+	$("button.green").removeClass("green");
 	resize();
 }
 
@@ -87,6 +93,8 @@ function sizeDown()
 	if(size <= 2)
 		return;
 	size--;
+	$("button.green").addClass("blue");
+	$("button.green").removeClass("green");
 	resize();
 }
 function startHandler(size){
@@ -100,7 +108,7 @@ function startHandler(size){
 		if(winImg.length > 1)
 			winImg = wimImg[winImg.length - 1];
 		winImg = winImg.toString().toUpperCase();
-		if(clicked >= Math.floor(size * size * 0.75))
+		if(clicked >= Math.floor(size * size * 0.75) && $(this).attr('checked') != 'checked')
 		{
 			if(Math.random() > 0.7 || clicked == (size*size)-1)
 			{
@@ -108,6 +116,8 @@ function startHandler(size){
 				$(this).html("<img src=\""+emojione.imagePathSVG+winImg+".svg\"></img>");
 				//alert('nice one');
 				//this is a hack to get around things
+				$("button.blue").addClass("green");
+				$("button.blue").removeClass("blue");
 				$(this).attr('checked','1');
 			}
 		}
